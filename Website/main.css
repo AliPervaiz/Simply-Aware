@@ -2,3 +2,11 @@ body
 {
     background: linear-gradient(360deg, #8e7dff, #008080);
 }
+#logo
+{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
