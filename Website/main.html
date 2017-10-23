@@ -1,11 +1,19 @@
 <html>
     <head>
         <title>Simply Aware</title>
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="map.js"></script>
     </head>
     <body>
-        <div id="logo">
-            <img src="logo.png" height="200" width="200">
+        <div id="header">
+            <img id="logo" src="logo.png" height="70%">
+            <img id="about" src="about.svg" height="70%" align="right">
         </div>
+        <div id="player">
+            <div id="menu"></div>
+            <div id="map"></div>
+        </div>
+        
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnNDcEs9Vl7grUvFWosxzqjuZ-zF-mqMk&libraries=visualization&callback=eqfeed_callback"></script>
     </body>    
 </html>
