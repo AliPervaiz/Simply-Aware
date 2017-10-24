@@ -3,6 +3,7 @@
         <title>Simply Aware</title>
         <link rel="stylesheet" type="text/css" href="main.css">
         <script src="map.js"></script>
+        <script src="main.js"></script>
     </head>
     <body>
         <div id="header">
@@ -10,10 +11,19 @@
             <img id="about" src="about.svg" height="70%" align="right">
         </div>
         <div id="player">
-            <div id="menu"></div>
+            <div id="menu">
+                <nav class="mdl-navigation">
+                    <a class="Button" onclick='mapClick()'>Map</a>
+                    <a class="Button" onclick='dataClick()'>Data</a>
+                    <a class="Button" onclick='formClick()'>Form</a>
+                </nav>
+            </div>
             <div id="map"></div>
+            <div id="data"></div>
+            <div id="form">
+                
+            </div>
         </div>
-        
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnNDcEs9Vl7grUvFWosxzqjuZ-zF-mqMk&libraries=visualization&callback=eqfeed_callback"></script>
+        <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnNDcEs9Vl7grUvFWosxzqjuZ-zF-mqMk&libraries=visualization&callback=eqfeed_callback"></script>
     </body>    
 </html>

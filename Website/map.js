@@ -14,7 +14,7 @@ var map;
 function eqfeed_callback(results)
 {
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 7,
+        zoom: 2,
         center: {lat: 37, lng: -120},
         mapTypeId: 'satellite'
     });
