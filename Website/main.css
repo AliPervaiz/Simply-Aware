@@ -48,7 +48,7 @@ body
     height: 93%;
     width: 225px;
     z-index: 2;
-    box-shadow: -5px 5px 5px #888888;
+    box-shadow: -5px 5px 5px #000000;
 }
 #logo
 {
