@@ -75,3 +75,7 @@ body
     cursor: pointer;
     opacity: 0.5;
 }
+html, body {margin: 0; height: 100%; overflow: hidden}
+#scroll {width:99%; overflow:hidden;}
+#scroll form{height:80%; width:100%;}
+#scroll form{overflow:auto;}
