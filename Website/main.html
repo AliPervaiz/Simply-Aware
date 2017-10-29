@@ -4,7 +4,10 @@
         <link rel="stylesheet" type="text/css" href="main.css">
         <script src="map.js"></script>
         <script src="main.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="chart.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
     </head>
     <body>
         <div id="header">
@@ -15,54 +18,62 @@
             <div id="menu">
                 <a class="Button" onclick='mapClick()'>Map</a>
                 <a class="Button" onclick='dataClick()'>Data</a>
-                <div id="scroll">
+                <a class="Button" onclick='formClick()'>Form</a>
+                <div id="symptoms">
                     <form action="/action_page.php">
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
-                        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-                        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
+                        <h5>Symptoms</h5>
+                        <input type="checkbox" value="Allergy">bet<br>
+                        <input type="checkbox" value="Common Cold">bet<br>
+                        <input type="checkbox" value="Allergy">bet<br>
+                        <input type="checkbox" value="Common Cold">bet<br>
+                        <input type="checkbox" value="Allergy">bet<br>
+                        <input type="checkbox" value="Common Cold">bet<br>
+                        <input type="checkbox" value="Allergy">bet<br>
+                        <input type="checkbox" value="Common Cold">bet<br>
+                        <input type="checkbox" value="Allergy">bet<br>
+                        <input type="checkbox" value="Common Cold">bet<br>
+                        <input type="checkbox" value="Allergy">bet<br>
+                        <input type="checkbox" value="Common Cold">bet<br>
+                        <input type="checkbox" value="Allergy">bet<br>
+                        <input type="checkbox" value="Common Cold">bet<br>
+                        <input type="checkbox" value="Allergy">bet<br>
+                        <input type="checkbox" value="Common Cold">bet<br>
                         <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <div id="diseases">
+                    <form id="diseasesform" action="/action_page.php">
+                        <h5>Diseases</h5>
+                        <input type="checkbox" value="Allergy">Allergy<br>
+                        <input type="checkbox" value="Common Cold">Common Cold<br>
+                        <input type="checkbox" value="Flu">Flu (Influenza)<br>
+                        <input type="checkbox" value="Strep Throat">Strep Throat<br>
+                        <input type="checkbox" value="Ringworm">Ringworm<br>
+                        <input type="checkbox" value="Giardiasis">Giardiasis<br>
+                        <input type="checkbox" value="Candid">Candid<br>
+                        <input type="checkbox" value="Ebola">Ebola<br>
+                        <input type="checkbox" value="Hepatitis B">Hepatitis B<br>
+                        <input type="checkbox" value="HIV/AIDS">HIV/AIDS<br>
+                        <input type="checkbox" value="Measles">Measles<br>
+                        <input type="checkbox" value="Pertussis">Pertussis<br>
+                        <input type="checkbox" value="Tuberculosis">Tuberculosis<br>
+                        <input type="checkbox" value="West Nile Virus">West Nile Virus<br>
+                        <input type="checkbox" value="Zika">Zika<br>
+                        <input type="checkbox" value="Chickenpox">Chickenpox<br>
+                        <input type="checkbox" value="Syphilis">Syphilis<br>
+                        <input type="checkbox" value="Malaria">Malaria<br>
+                        <input type="checkbox" value="Conjunctivitis">Conjunctivitis (Pink eye)<br>
+                        <input type="checkbox" value="Athlete’s foot">Athlete’s foot<br>
                     </form>
                 </div>
             </div>
             <div id="map"></div>
-            <div id="data"></div>
+            <div id="data">
+                <div id="piechart"></div><br>
+                <div id="piechart2"></div>
+                <div id="geochart"></div>
+                <div id="geochart2"></div>
+            </div>
         </div>
         <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnNDcEs9Vl7grUvFWosxzqjuZ-z F-mqMk&libraries=visualization&callback=eqfeed_callback"></script>
     </body>    

@@ -21,9 +21,18 @@ body
     width: 100%;
     z-index: 1;
 }
+#piechart
+{
+    position: absolute;
+}
+#geochart
+{
+    position: absolute;
+    transform: translate(0%, 58%);
+}
 #data
 {
-    background-color: blue;
+    background-color: white;
     position: absolute;
     transform: translate(0%, 8%);
     height: 93%;
@@ -76,6 +85,9 @@ body
     opacity: 0.5;
 }
 html, body {margin: 0; height: 100%; overflow: hidden}
-#scroll {width:99%; overflow:hidden;}
-#scroll form{height:80%; width:100%;}
-#scroll form{overflow:auto;}
+#symptoms {width:99%; overflow:hidden;}
+#symptoms form{height:40%; width:100%;}
+#symptoms form{overflow:auto;}
+#diseases {width:99%; overflow:hidden;}
+#diseases form{height:30%; width:100%;}
+#diseases form{overflow:auto;}

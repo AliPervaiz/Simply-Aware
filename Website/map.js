@@ -15,6 +15,7 @@ var heatmap;
 }*/
 function eqfeed_callback(results)
 {
+    document.getElementById("symptoms").style.display = "none";
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 2,
         center: {lat: 37, lng: -120},
@@ -863,7 +864,7 @@ function eqfeed_callback(results)
     var locations = [];
     var cords = [];
     var symptoms = ["Coughing"];
-    for(var i = 0; i < 500; i++)
+    /*for(var i = 0; i < 500; i++)
     {
         var lat = Math.random()*140-50;
         var lng = Math.random()*360-180;
@@ -879,7 +880,7 @@ function eqfeed_callback(results)
                 if(results[i].elevation>-8)
                     console.log(cords[i]+",");
           }
-        });
+        });*/
     var gradient = 
     [
           'rgba(0, 255, 0, 0)',
