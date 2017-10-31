@@ -1,6 +1,7 @@
 var map;
 var heatmapData;
 var heatmap;
+var pointArray;
 /*function initMap()
 {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -15,7 +16,7 @@ var heatmap;
 }*/
 function eqfeed_callback(results)
 {
-    document.getElementById("symptoms").style.display = "none";
+    document.getElementById("symptomsform").style.height = "0%";
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 2,
         center: {lat: 37, lng: -120},
@@ -861,9 +862,10 @@ function eqfeed_callback(results)
         new google.maps.LatLng(50.478325526638,5.2806991734443045),
         new google.maps.LatLng(56.10483110460558,79.73588262137292)
     ];
+    
     var locations = [];
+    pointArray = new google.maps.MVCArray(locations);
     var cords = [];
-    var symptoms = ["Coughing"];
     /*for(var i = 0; i < 500; i++)
     {
         var lat = Math.random()*140-50;
@@ -890,10 +892,10 @@ function eqfeed_callback(results)
           'rgba(255, 0, 0, 1)'
      ];
     heatmap = new google.maps.visualization.HeatmapLayer({
-        data: heatmapData,
+        data: pointArray,
         dissipating: false,
         map: map,
         gradient: gradient,
         radius: 7
     });
-} 
+}
