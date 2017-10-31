@@ -1,3 +1,4 @@
+var submitData = [];
 function dataClick()
 {              
     document.getElementById('data').style.zIndex=1;
@@ -24,19 +25,38 @@ function formClick()
 function formsubmit()
 {
     formClick();
-    var children = document.getElementById('symptomsform').getElementsByTagName('*');
-    for(var i = 0; i < children.length; i++)
-        children[i].checked = false;
-    children[children.length-1].value = "";
+    var location;
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+    function showPosition(position)
+    {
+        location = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+        var children = document.getElementById('symptomsform').getElementsByTagName('*');
+        for(var i = 0; i < children.length; i++)
+        {
+            if(children[i].checked)
+            {
+                console.log(location);
+                var dict = {
+                    "location": location,
+                    "name": children[i].value
+                };
+                submitData.push(dict);
+            }
+        }
+        children[children.length-1].value = "";
+    }   
 }
 function remap()
 {
+    console.log(submitData);
+    var newData = [];
     var children = document.getElementById('diseasesform').getElementsByTagName('*');
-    console.log(Math.floor((children.length-1)/2));
-    newData = [new google.maps.LatLng(21.439858156592408,106.26054790558447)];
     for (var i = 1; i < children.length; i+=2) 
     {
-        console.log(Math.floor((i+1)/2));
         if(children[i].checked)
         {
             for(var j = 0; j < heatmapData.length; j++)
@@ -44,6 +64,15 @@ function remap()
                 if(j%Math.floor((children.length-1)/2) == Math.floor((i+1)/2))
                 {
                     newData.push(heatmapData[j]);
+                }
+            }
+            for(var j = 0; j < submitData.length; j++)
+            {
+                console.log(submitData[j]["name"]);
+                if(submitData[j]["name"]==children[i].value)
+                {
+                    console.log(submitData[j]["location"]);
+                    newData.push(submitData[j]["location"]);
                 }
             }
         }
