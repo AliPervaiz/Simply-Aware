@@ -3,7 +3,7 @@ SimplyAware
 
 What is it?
 ------------------
-Simply Aware is an Android App which predicts the spread of diseases, attempting to raise awareness in susceptible societies.
+Simply Aware is a website which predicts the spread of diseases, attempting to raise awareness in susceptible societies.
 
 Contributing
 ------------------
