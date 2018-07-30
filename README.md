@@ -16,3 +16,7 @@ The [first version](https://github.com/Sinister-Paradox/EARTHACKS) of this app c
 Contributors
 ------------------
 Jess DeJong ([jessdejong](https://github.com/jessdejong)), Alex DeJong ([SinisterParadox](https://github.com/SinisterParadox)), and Syed Pervaiz ([AliPervaiz](https://github.com/AliPervaiz))
+
+To Do
+------------------
+Give Syed Ownership
