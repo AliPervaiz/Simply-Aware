@@ -19,4 +19,3 @@ Jess DeJong ([jessdejong](https://github.com/jessdejong)), Alex DeJong ([Siniste
 
 To Do
 ------------------
-Give Syed Ownership
